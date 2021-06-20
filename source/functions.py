@@ -51,7 +51,7 @@ class Comparison:
     return 
   
   def get_dataset(self, dataset_name="Generator", classification_function=0, 
-                  noise_percentage=0.7, random_state=1):
+                  noise_percentage=0.7, random_state=1 , P = ""):
       #Dataset
       #  Name M(#instances) N(#attributes) Anomaly
       #  Threshold
@@ -74,6 +74,9 @@ class Comparison:
       elif dataset_name=="SMTP":
          path = "datasets/SMTP.csv"
          return self.get_file_stream(path);
+      elif dataset_name=="new":
+         path = "datasets/SMTP.csv"
+         return self.get_file_stream(P);
       else:
          print("The specified dataset do not exist yet."+ 
                " Try to contact the administrator for any add. "+

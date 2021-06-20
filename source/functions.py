@@ -33,7 +33,7 @@ class Comparison:
     # 2. Prepare for use This function is usefull to have data window by window
     # stream.prepare_for_use() # Deprecated so how to prepare data?
     
-    models = [HalfSpaceTrees(n_features=stream_n_features, window_size=window, 
+    models = [HalfSpaceTrees( window_size=window, 
                              n_estimators=estimators, anomaly_threshold=anomaly),
     #IForest ASD use all the window_size for the sample in the training phase
     IsolationForestStream(window_size=window, n_estimators=estimators, 

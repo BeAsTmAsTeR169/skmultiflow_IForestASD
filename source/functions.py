@@ -75,7 +75,7 @@ class Comparison:
          path = "datasets/SMTP.csv"
          return self.get_file_stream(path);
       elif dataset_name=="new":
-         path = "datasets/SMTP.csv"
+         path = P
          return self.get_file_stream(P);
       else:
          print("The specified dataset do not exist yet."+ 
